@@ -1,10 +1,10 @@
-function initialize() {
-	var TFDsfo = new google.maps.Latlng(42.935385,-114.405090)
-	var myOptions = {
-		zoom:8,
-		center: TFDsfo,
-		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		styles: [
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 42.936017, lng: -114.405433},
+          zoom: 8
+        styles: [
   {
     "elementType": "geometry",
     "stylers": [
@@ -35,15 +35,6 @@ function initialize() {
     "stylers": [
       {
         "color": "#c9b2a6"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.country",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "weight": 0.5
       }
     ]
   },
@@ -93,28 +84,11 @@ function initialize() {
     ]
   },
   {
-    "featureType": "poi.business",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
     "featureType": "poi.park",
     "elementType": "geometry.fill",
     "stylers": [
       {
         "color": "#a5b076"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "labels.text",
-    "stylers": [
-      {
-        "visibility": "off"
       }
     ]
   },
@@ -245,9 +219,6 @@ function initialize() {
     ]
   }
 ]
-
-};
-	var map = new google.maps.Map(
-		document.getElementById("map_canvas"),
-		myOptions);
-}
+        });
+      }
+</script>
