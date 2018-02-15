@@ -23,6 +23,9 @@ function initMap() {
             styles: styles[styleSelector.value]
         });
     });
+    
+    map.data.loadGeoJson (
+        'RequestedFires.json');
 }
 
 var styles = {
