@@ -24,7 +24,13 @@ function initMap() {
         });
     });
     
-
+   var layer = new google.maps.FusionTablesLayer({
+    query: {
+      select: '\'Geocodable address\'',
+      from: '10bFMWhgtdZ0lN9ErpGOdL5_cROoAJngnuirVSTnC'
+    }
+  });
+  layer.setMap(map);
 }
 
 var styles = {
