@@ -27,7 +27,7 @@ function initMap() {
    var layer = new google.maps.FusionTablesLayer({
     query: {
       select: '\'Geocodable address\'',
-      from: '10bFMWhgtdZ0lN9ErpGOdL5_cROoAJngnuirVSTnC'
+      from: '1DzErcYaFm_l0g6yMXxXfDg8EOZtRlFQ8J2rrGQtM'
     }
   });
   layer.setMap(map);
