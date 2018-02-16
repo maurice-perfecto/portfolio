@@ -23,16 +23,17 @@ function initMap() {
             styles: styles[styleSelector.value]
         });
     });
-    
-   var layer = new google.maps.FusionTablesLayer({
-    query: {
-      select: "col2",
-      from: '1DzErcYaFm_l0g6yMXxXfDg8EOZtRlFQ8J2rrGQtM'
-    }
-  });
-  layer.setMap(map);
-}
 
+    var layer = new google.maps.FusionTablesLayer({
+            query: {
+            select: 'col2',
+            from: '1DzErcYaFm_l0g6yMXxXfDg8EOZtRlFQ8J2rrGQtM',
+            where: ''
+        }
+    });
+    layer.setMap(map);
+}
+/var map.Div = document.getElementById('gogft-info-window');/
 var styles = {
     default: null,
     silver: [

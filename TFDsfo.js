@@ -23,7 +23,7 @@ function initMap() {
             styles: styles[styleSelector.value]
         });
     });
-    
+
 
 }
 
