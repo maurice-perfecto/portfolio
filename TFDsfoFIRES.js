@@ -24,14 +24,19 @@ function initMap() {
         });
     });
 
-    var layer = new google.maps.FusionTablesLayer({
-        query: {
-            select: 'col2',
-            from: '1DzErcYaFm_l0g6yMXxXfDg8EOZtRlFQ8J2rrGQtM',
-            where: ''
-        }
+   var layer = new google.maps.FusionTablesLayer({
+      map: map,
+      heatmap: { enabled: false },
+      query: {
+        select: "col2",
+        from: "1DzErcYaFm_l0g6yMXxXfDg8EOZtRlFQ8J2rrGQtM",
+        where: ""
+      },
+      options: {
+        styleId: 2,
+        templateId: 2
+      }
     });
-    layer.setMap(map);
 }
 /var map.Div = document.getElementById('gogft-info-window');/
 var styles = {
