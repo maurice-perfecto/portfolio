@@ -24,18 +24,20 @@ function initMap() {
         });
     });
 
-   var layer = new google.maps.FusionTablesLayer({
-      map: map,
-      heatmap: { enabled: false },
-      query: {
-        select: "col2",
-        from: "1DzErcYaFm_l0g6yMXxXfDg8EOZtRlFQ8J2rrGQtM",
-        where: ""
-      },
-      options: {
-        styleId: 2,
-        templateId: 2
-      }
+    var layer = new google.maps.FusionTablesLayer({
+        map: map,
+        heatmap: {
+            enabled: false
+        },
+        query: {
+            select: "col2",
+            from: "1DzErcYaFm_l0g6yMXxXfDg8EOZtRlFQ8J2rrGQtM",
+            where: ""
+        },
+        options: {
+            styleId: 2,
+            templateId: 2
+        }
     });
 }
 /var map.Div = document.getElementById('gogft-info-window');/
