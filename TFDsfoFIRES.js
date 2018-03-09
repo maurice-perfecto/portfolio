@@ -7,7 +7,8 @@ function initMap() {
             lng: -114.40543
         },
         zoom: 8,
-        mapTypeControl: false
+        mapTypeControl: false,
+        mapTypeId: 'terrain'
     });
 
     var styleControl = document.getElementById('style-selector-control');
