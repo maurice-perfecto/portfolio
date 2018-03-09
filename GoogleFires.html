@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TFD-SFO</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        li {
+            text-align: left;
+            padding-bottom: 10px;
+        }
+
+        h5 {
+            text-align: center;
+        }
+
+        #map {
+            height: 600px;
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        html,
+        body {
+            height: 0;
+            margin: 5;
+            padding: 10;
+        }
+
+        .map-control {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+            font-family: 'Roboto', 'sans-serif';
+            margin: 10px;
+        }
+
+        #map .map-control {
+            display: block;
+        }
+
+        .selector-control {
+            font-size: 14px;
+            line-height: 30px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+    </style>
+</head>
+
+<body class="center">
+    <h1>Using Google Maps API and Fusion Tables</h1>
+    <h2>Mapping Fire Perimeters and Displaying Attribute Data </h2>
+    <h3>Idaho BLM Twin Falls District</h3>
+
+    <div id="style-selector-control" class="map-control">
+        <select id="style-selector" class="selector-control">
+        <option value="default">Default</option>
+        <option value="silver">Silver</option>
+        <option value="night">Night mode</option>
+        <option value="retro" selected="selected">Retro</option>
+      </select>
+    </div>
+    <div id="map"></div>
+    <p>The Twin Falls District is located in South-Central Idaho and manages approximately 3.9 million acres of public land. Home to 16 Type 4 Heavy Wildland Engines, three Osh Kosh Super Heavy Wildland Fire Engines, one Tatra Super Heavy Engine/Tactical Water Tender, three Type 6 Wildland Fire Engines, three Dozers, three Water Tenders, the Twin Falls Helitack crew and contracted Type 2 Helicopter, as well as the South Idaho Interagency Type 2 Initial Attack Crew. Each fire season BLM firefighters respond to on average 150 initial attack fires burning over 200,000 acres of rangeland and forest. This webpage is intended to serve as a resource for the public to use in gaining information about location and size of past and ongoing wildland fire incidents.</p>
+    <p>This webpage and map is to serve as proof of concept using the following five fires:</p>
+    <li>Murphy Complex Fire (2007)</li>
+    <li>Laidlaw Fire (2016)</li>
+    <li>Centennial Fire (2017)</li>
+    <li>Antelope Fire (2017)</li>
+    <li>Mammoth Fire (2017)</li>
+    <h5>Data courtesy of the Idaho BLM Twin Falls District and Kurt Kirkpatrick</h5>
+    <script src="TFDsfoFIRES.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBooE8Ti2kM7msoy-Q0ClTrQQJ7z6RPj1s&callback=initMap">
+
+
+    </script>
+</body>
+
+</html>
