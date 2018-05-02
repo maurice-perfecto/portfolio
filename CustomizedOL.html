@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<title>Customized OpenLayer Client</title>
+	<title>Customized OpenLayers Client</title>
 	<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
 	<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
 	<script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
@@ -10,29 +10,41 @@
 <body>
 	<div id="map" class="map"></div>
 	<script>
+		
+		var projection = ol.proj.get('EPSG:3857');
+		
+		var JuniperButteTrailer = new ol.Feature({
+			geometry: new ol.geom.Polygon([[
+				[-115.363529277433, 42.33233533296569],
+				[-115.363308421288, 42.33233522176297],
+				[-115.363308848499, 42.33236898415704],
+				[-115.363527805881, 42.33236916698242],
+			]]).transform('EPSG:4326',projection),
+		});
+		
 		var terrain = new ol.layer.Tile({
 			source: new ol.source.Stamen({
 				layer: 'terrain'
 			})
-		});
+		})
 
 		var MurphyComplex = new ol.layer.Vector({
 			source: new ol.source.Vector({
 				url: 'maurice-perfecto.github.io/portfolio/MurphyComplex.kml',
-				projection: ol.proj.get('EPSG:3857'),
+				projection: projection,
 				format: new ol.format.KML()
 			})
-		});
-
+		})
 
 
 		var map = new ol.Map({
-			layers: [terrain, MurphyComplex],
 			target: 'map',
+			layers: [terrain, MurphyComplex],
 			view: new ol.View({
 				center: ol.proj.transform(
 					[-115.368639, 42.030968], 'EPSG:4326', 'EPSG:3857'),
-				zoom: 10
+				zoom: 10,
+				projection: projection
 			})
 		});
 	</script>
