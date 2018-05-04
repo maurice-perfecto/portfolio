@@ -1,0 +1,42 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="css/OpenLayers_01.css" type="text/css">
+
+	<!-- these two files are imported from a host that provides a hosted full build of the OpenLayers package for development as documented here: https://openlayers.org/download/ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.css" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.js" type="text/javascript"></script>
+	<style>
+		body {
+			background-color: beige
+		}
+
+		.map {
+			margin: auto;
+			height: 400px;
+			width: 600px;
+		}
+		
+
+		h1 {text-align: center}
+		
+		h2 {text-align: center}
+	</style>
+</head>
+
+<body>
+	<h1>Final OpenLayers Mapping Client</h1>
+
+	<h2>Post-Classification Change Type</h2>
+	
+	<div style="padding-bottom: 100px" id='map' class='map'></div>
+
+	<div  id="VegMap" class='map'></div>
+	
+	<h2>Unsupervised Vegetation Classifcation</h2>
+
+	<!-- external javascript code for both maps -->
+	<script src="Final_Maps.js" type="text/javascript"></script>
+</body>
+
+</html>
