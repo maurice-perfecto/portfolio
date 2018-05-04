@@ -22,17 +22,6 @@ var MurphyComplex = new ol.layer.Vector({
 	style: fire_style
 })
 
-var GEOL = new ol.layer.Tile({
-	source: new ol.source.TileWMS({
-	url: 'https://mrdata.usgs.gov/services/id?version=1.3.0',
-	  params: {
-		LAYERS: 'Idaho_Geology',
-		FORMAT: 'image/png',
-		TRANSPARENT: true
-	  }
-	})
-})
-
 
 var basemap = new ol.layer.Tile({
                     source: new ol.source.Stamen({
