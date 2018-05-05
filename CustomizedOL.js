@@ -16,10 +16,9 @@ var MurphyComplex = new ol.layer.Vector({
 	source: new ol.source.Vector({
 		url: 'http://maurice-perfecto.github.io/portfolio/MurphyComplex.html',
 		format: new ol.format.KML({
-				extractStyles:false
+				extractStyles:true
 		})
 	}),
-	style: fire_style
 })
 
 

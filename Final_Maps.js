@@ -14,7 +14,7 @@ var basemap = new ol.layer.Tile({
                         layer: 'terrain'
                     })
                 })
-var PostClassChange = new ol.layer.Tile({
+var PostClassChange = new ol.layer.Image({
 	source: new ol.source.TileWMS({
 	url: 'http://internetmapping.net:8080/geoserver/wms?',
 	  params: {
@@ -25,7 +25,7 @@ var PostClassChange = new ol.layer.Tile({
 	})
 })
 
-var Veg2006 = new ol.layer.Tile({
+var Veg2006 = new ol.layer.Image({
 					source: new ol.source.TileWMS({
 						url: 'http://internetmapping.net:8080/geoserver/wms?',
 						params: {
@@ -36,7 +36,7 @@ var Veg2006 = new ol.layer.Tile({
 					})
 })
 
-var Veg2008 = new ol.layer.Tile({
+var Veg2008 = new ol.layer.Image({
 					source: new ol.source.TileWMS({
 						url: 'http://internetmapping.net:8080/geoserver/wms?',
 						params: {
