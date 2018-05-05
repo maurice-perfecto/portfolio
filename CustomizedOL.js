@@ -4,6 +4,9 @@ var fire_fill_color = [181,52,60,1]
 var poly_fill = [0,0,0,0]
 var BFO_perim = [254,254,46,1]
 var JFO_perim = [2,61,253,1]
+var SFO_perim = [254,1,1,1]
+var Grouse_Hab = [49,196,83,1]
+var grouse_fill = [12,107,34,.25]
 
 var fire_style = new ol.style.Style({
 	fill: new ol.style.Fill({
@@ -11,6 +14,16 @@ var fire_style = new ol.style.Style({
 	}),
 	stroke: new ol.style.Stroke({
 	  color: fire_perim_color,
+	  width: 2
+	}),
+});
+
+var grouse_style = new ol.style.Style({
+	fill: new ol.style.Fill({
+	  color: grouse_fill
+	}),
+	stroke: new ol.style.Stroke({
+	  color: Grouse_Hab,
 	  width: 2
 	}),
 });
@@ -35,6 +48,15 @@ var JFO_style = new ol.style.Style({
 	}),
 });
 
+var SFO_style = new ol.style.Style({
+	fill: new ol.style.Fill({
+	  color: poly_fill
+	}),
+	stroke: new ol.style.Stroke({
+	  color: SFO_perim,
+	  width: 3
+	}),
+});
 
 var TFD_BFO = new ol.layer.Vector({
 	source: new ol.source.Vector({
@@ -56,9 +78,39 @@ var TFD_JFO = new ol.layer.Vector({
 	style: JFO_style
 })	
 
+var TFD_SFO = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		url: 'http://maurice-perfecto.github.io/portfolio/SFO.kml',
+		format: new ol.format.KML({
+				extractStyles:false
+		})
+	}),
+	style: SFO_style
+})	
+
+var Sage_Grouse = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		url: 'http://maurice-perfecto.github.io/portfolio/SageGrouse.kml',
+		format: new ol.format.KML({
+				extractStyles:false
+		})
+	}),
+	style: grouse_style
+})	
+
 var MurphyComplex = new ol.layer.Vector({
 	source: new ol.source.Vector({
 		url: 'http://maurice-perfecto.github.io/portfolio/MurphyComplex.kml',
+		format: new ol.format.KML({
+				extractStyles:false
+		})
+	}),
+	style: fire_style
+})
+
+var Antelope = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		url: 'http://maurice-perfecto.github.io/portfolio/AntelopeFire.kml',
 		format: new ol.format.KML({
 				extractStyles:false
 		})
@@ -77,10 +129,10 @@ var basemap = new ol.layer.Tile({
 
 var map = new ol.Map({
             target: 'map',
-            layers: [basemap, MurphyComplex, TFD_BFO, TFD_JFO
+            layers: [basemap, TFD_BFO, TFD_JFO, TFD_SFO, Sage_Grouse, Antelope, MurphyComplex
 					],
             view: new ol.View({
-                center: ol.proj.fromLonLat([-115.368205, 42.206283]),
-                zoom: 9
+                center: ol.proj.fromLonLat([-114.397558, 42.961290]),
+                zoom: 8
             })
         })
