@@ -14,11 +14,12 @@ var fire_style = new ol.style.Style({
 
 var MurphyComplex = new ol.layer.Vector({
 	source: new ol.source.Vector({
-		url: 'http://maurice-perfecto.github.io/portfolio/MurphyComplex.html',
+		url: 'http://maurice-perfecto.github.io/portfolio/BFO.kml',
 		format: new ol.format.KML({
-				extractStyles:true
+				extractStyles:false
 		})
 	}),
+	style: fire_style
 })
 
 
@@ -33,8 +34,7 @@ var basemap = new ol.layer.Tile({
 var map = new ol.Map({
             target: 'map',
             layers: [basemap, MurphyComplex,
-
-            ],
+					],
             view: new ol.View({
                 center: ol.proj.fromLonLat([-115.368205, 42.206283]),
                 zoom: 9
