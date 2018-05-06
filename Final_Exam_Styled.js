@@ -5,7 +5,7 @@ var Shape_1 = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/ws_mcruz03/ows?service=wms&version=1.3.0&request=GetCapabilities',
 		params: {
-			LAYERS: '35106-A5_CONT',
+			LAYERS: 'mc35106-A5_CONT',
 			FORMAT: 'image/png',
 			TRANSPARENT: true
 		}
@@ -16,7 +16,7 @@ var Shape_2 = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/ws_mcruz03/ows?service=wms&version=1.3.0&request=GetCapabilities',
 		params: {
-			LAYERS: '35106-A6_CONT',
+			LAYERS: 'mc_35106-A6_CONT',
 			FORMAT: 'image/png',
 			TRANSPARENT: true
 		}
@@ -27,7 +27,7 @@ var Shape_3 = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/ws_mcruz03/ows?service=wms&version=1.3.0&request=GetCapabilities',
 		params: {
-			LAYERS: 'tgr2006se_bern_lka',
+			LAYERS: 'mc_tgr2006se_bern_lka',
 			FORMAT: 'image/png',
 			TRANSPARENT: true
 		}
