@@ -16,9 +16,9 @@ var basemap = new ol.layer.Tile({
                 })
 var PostClassChange = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
-	url: 'http://internetmapping.net:8080/geoserver/wms?',
+	url: 'http://internetmapping.net:8080/geoserver/ws_mcruz03/ows?version=1.3.0',
 	  params: {
-		LAYERS: 'ws_mcruz03:No_Change_Veg_Type',
+		LAYERS: 'No_Change_Veg_Type',
 		FORMAT: 'image/png',
 		TRANSPARENT: true
 	  }
@@ -27,9 +27,9 @@ var PostClassChange = new ol.layer.Tile({
 
 var Veg2006 = new ol.layer.Image({
 					source: new ol.source.TileWMS({
-						url: 'http://internetmapping.net:8080/geoserver/wms?',
+						url: 'http://internetmapping.net:8080/geoserver/ws_mcruz03/ows?version=1.3.0',
 						params: {
-							LAYERS: 'ws_mcruz03:Class_Veg_2006',
+							LAYERS: 'Class_Veg_2006',
 							FORMAT: 'image/png',
 							TRANSPARENT: true
 						}
@@ -38,9 +38,9 @@ var Veg2006 = new ol.layer.Image({
 
 var Veg2008 = new ol.layer.Image({
 					source: new ol.source.TileWMS({
-						url: 'http://internetmapping.net:8080/geoserver/wms?',
+						url: 'http://internetmapping.net:8080/geoserver/ws_mcruz03/ows?version=1.3.0',
 						params: {
-							LAYERS: 'ws_mcruz03Class_Veg_2008',
+							LAYERS: 'Class_Veg_2008',
 							FORMAT: 'image/png',
 							TRANSPARENT: true
 						}
