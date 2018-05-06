@@ -5,7 +5,7 @@ var Styled_Shape_1 = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/ws_mcruz03/ows?service=wms&version=1.3.0&request=GetCapabilities',
 		params: {
-			LAYERS: '',
+			LAYERS: 'contour_1',
 			FORMAT: 'image/png',
 			TRANSPARENT: true
 		}
@@ -16,7 +16,7 @@ var Styled_Shape_2 = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/ws_mcruz03/ows?service=wms&version=1.3.0&request=GetCapabilities',
 		params: {
-			LAYERS: '',
+			LAYERS: 'contour_2',
 			FORMAT: 'image/png',
 			TRANSPARENT: true
 		}
