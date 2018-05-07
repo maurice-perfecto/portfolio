@@ -52,7 +52,7 @@ var Veg2008 = new ol.layer.Image({
 // create our base map objects 
 var map = new ol.Map({
 	target: 'map',
-	layers: [basemap, MurphyComplex, ],
+	layers: [basemap, MurphyComplex, PostClassChange],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-115.368205, 42.206283]),
 		zoom: 9
